@@ -12,6 +12,38 @@
     />
     <script src="https://unpkg.com/phosphor-icons"></script>
     <link rel="icon" href="img\toast-svgrepo-com.svg" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+    >
+            $('img[data-enlargeable]').addClass('img-enlargeable').click(function() {
+        var src = $(this).attr('src');
+        var modal;
+
+        function removeModal() {
+          modal.remove();
+          $('body').off('keyup.modal-close');
+        }
+        modal = $('<div>').css({
+          background: 'RGBA(0,0,0,.5) url(' + src + ') no-repeat center',
+          backgroundSize: 'contain',
+          width: '100%',
+          height: '100%',
+          position: 'fixed',
+          zIndex: '10000',
+          top: '0',
+          left: '0',
+          cursor: 'zoom-out'
+        }).click(function() {
+          removeModal();
+        }).appendTo('body');
+        //handling ESC
+        $('body').on('keyup.modal-close', function(e) {
+          if (e.key === 'Escape') {
+            removeModal();
+          }
+        });
+      });
+    </script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -63,8 +95,20 @@
         </div>
       </card>
       <figure class="portfolio">
-        <img class="images head" src="img\IMG_4231.JPG" />
-        <img class="images collate" src="img\dity but beterrr 2222.png" />
+        <img
+          data-enlargeable
+          width="100"
+          style="cursor: zoom-in"
+          class="images head"
+          src="img\IMG_4231.JPG"
+        />
+        <img
+          data-enlargeable
+          width="100"
+          style="cursor: zoom-in"
+          class="images collate"
+          src="img\dity but beterrr 2222.png"
+        />
         <img class="images collate" src="img\tiger logo for insta.jpg" />
         <img class="images collate" src="img\ビッグマミーミルカーズ.jpg" />
         <img class="images head" src="img\Enter Komodo Dragon.JPG" />
