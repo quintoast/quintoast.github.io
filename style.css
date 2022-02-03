@@ -64,6 +64,9 @@ a:visited {
   color: #fdf0d5;
   text-decoration: none;
 }
+a:hover {
+  color: #ffffff;
+}
 .icon {
   color: #fdf0d5;
   font-size: 45px;
