@@ -106,5 +106,6 @@ footer {
 }
 .copyright {
   bottom: 0;
-  margin-bottom:20px;
+  position:fixed;
+  bottom: 0;
 }
