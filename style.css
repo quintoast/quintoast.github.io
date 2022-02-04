@@ -29,6 +29,12 @@ h1 {
   font-weight: 500;
   line-height: 1;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-left: 9px;
 }
 
 ul {
@@ -59,6 +65,9 @@ ul {
   height: 100%;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.1);
   z-index: 100;
+}
+nav {
+  margin-left: 10px;
 }
 
 a:link,
