@@ -41,8 +41,10 @@ ul {
 
 .container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin: 20px 60px;
+  align-items: center;
+  height: 100vh;
 }
 
 .navmenu {
@@ -74,9 +76,11 @@ a:hover {
 .portfolio {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
   gap: 30px;
+  margin-top: 1250px;
+  margin-left: 375px;
 }
 .images {
   width: 450px;
@@ -86,6 +90,24 @@ a:hover {
 .collate:hover {
   transform: scale(1.5);
   z-index: 99;
+}
+
+.aboutme {
+  display: flex;
+  margin-left: 200px;
+  flex-direction: column;
+  width: 900px;
+  gap: 28px;
+  justify-content: center;
+  background-color: #2e111193;
+  padding: 70px 70px;
+  border-radius: 30px 30px;
+}
+.aboutmedescription {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 64px;
+  justify-content: center;
 }
 /********************/
 /**Specific Styles***/
@@ -106,6 +128,36 @@ footer {
 }
 .copyright {
   bottom: 0;
-  position:fixed;
+  position: fixed;
   bottom: 0;
+}
+h2 {
+  font-size: 50px;
+  font-weight: 700;
+}
+.aboutmetitle {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  line-height: 1.5;
+}
+.aboutmeimage {
+  width: 300px;
+}
+
+.contacts {
+  font-size: 32px;
+  display: flex;
+  gap: 100px;
+  margin-top: 50px;
+  justify-content: center;
+}
+.contacticon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.privateinfo {
+  padding: 18px 0;
+  font-size: 16px;
 }
